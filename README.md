@@ -1,7 +1,7 @@
 # ansiplace
 Replace tags in any string with ansi color codes.  
 
-It's a very small and simple package that replaces tags (`{reset}`, `{blue}`) to ANSI color codes.
+It's a very small and simple package that replaces tags (`{reset}`, `{blue}`) to ANSI color codes.  
 It doesn't check if the terminal supports color. You have to do that yourself.  
 
 # Installation
@@ -17,7 +17,7 @@ console.log(text)
 ```  
 There is a rainbow example in [rainbow.js](https://github.com/Terminalfreaks/ansiplace/blob/master/rainbow.js).
   
-**`ansiplace(text)`**
+**`ansiplace(text)`**  
 The main and only function, which returns `text` with the color codes.  
 
 **`ansiplace.colors`**  
