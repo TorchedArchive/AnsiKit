@@ -1,0 +1,28 @@
+{
+  "name": "ansiplace",
+  "version": "1.0.0",
+  "description": "Replace tags in any string with ansi color codes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node example.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Terminalfreaks/ansiplace.git"
+  },
+  "keywords": [
+    "ansi",
+    "color",
+    "cli",
+    "ansi-escape-codes",
+    "terminal",
+    "console"
+  ],
+  "author": "Terminalfreaks",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Terminalfreaks/ansiplace/issues"
+  },
+  "homepage": "https://github.com/Terminalfreaks/ansiplace#readme",
+  "dependencies": {}
+}
