@@ -15,13 +15,17 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
+const colors = ["red", "green", "yellow", "blue", "magenta", "cyan", "black", "white"]
+const bgColors = ["red-bg", "green-bg", "yellow-bg", "blue-bg", "magenta-bg", "cyan-bg", "white-bg"]
 
 function ansiplace(str) {
-	const colors = {
+	const _colors = {
 		"{reset}": "\u001b[0m",
 		"{bold}": "\u001b[1m",
+		"{dim}|{faint}": "\u001b[2m",
 		"{italic}": "\u001b[3m",
 		"{underline}": "\u001b[4m",
+		"{invert}|{reverse}": "\u001b[7m",
 		"{strike}|{strikethrough}": "\u001b[9m",
 		"{black}": "\u001b[30m",
 		"{red}": "\u001b[31m",
@@ -30,14 +34,24 @@ function ansiplace(str) {
 		"{blue}": "\u001b[34m",
 		"{magenta}": "\u001b[35m",
 		"{cyan}": "\u001b[36m",
-		"{white}": "\u001b[37m"
+		"{white}": "\u001b[37m",
+		"{red-bg}": "\u001b[41m",
+		"{green-bg}": "\u001b[42m",
+		"{yellow-bg}": "\u001b[43m",
+		"{blue-bg}": "\u001b[44m",
+		"{magenta-bg}": "\u001b[45m",
+		"{cyan-bg}": "\u001b[46m",
+		"{white-bg}": "\u001b[47m",
 	}
 
-	for(let key in colors) {
-		str = str.replace(new RegExp(key, "g"), colors[key])
+	for(let key in _colors) {
+		str = str.replace(new RegExp(key, "g"), _colors[key])
 	}
-   	return str + colors["{reset}"]
+   	return `${str}${_colors["{reset}"]}`
 }
 
 module.exports = ansiplace;
-module.exports.colors = ["red", "green", "yellow", "blue", "magenta", "cyan"]
+module.exports.extras = {
+	colors,
+	styles: ["reset", "bold", "dim", "italic", "underline", "invert", "strikethrough", ...colors, ...bgColors]
+}
