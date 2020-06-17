@@ -35,7 +35,7 @@ An `object` of extra things, like all colors and all styles.
 
 
 ### Colors
-`black`
+`black`  
 `red`  
 `green`  
 `yellow`  
