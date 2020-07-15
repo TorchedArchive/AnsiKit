@@ -1,10 +1,10 @@
 {
   "name": "ansiplace",
-  "version": "1.1.0",
-  "description": "Replace tags in any string with ansi color codes.",
+  "version": "1.1.1",
+  "description": "Replace tags in any string with ANSI color codes.",
   "main": "index.js",
   "scripts": {
-    "test": "node example.js"
+    "test": "node test.js"
   },
   "repository": {
     "type": "git",

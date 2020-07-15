@@ -53,6 +53,14 @@ An `object` of extra things, like all colors and all styles.
 `cyan-bg`  
 `white-bg`  
 
+`bright-black` or `grey` or `gray`  
+`bright-red`  
+`bright-green`  
+`bright-yellow`  
+`bright-blue`  
+`bright-magenta`  
+`bright-cyan`  
+
 More will be coming soon.
 
 # Changelog
