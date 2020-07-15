@@ -1,21 +1,4 @@
-/*
-    <one line to give the program's name and a brief idea of what it does.>
-    Copyright (C) <year>  <name of author>
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <https://www.gnu.org/licenses/>.
-*/
-const colors = ["red", "green", "yellow", "blue", "magenta", "cyan", "black", "white"]
+const colors = ["red", "green", "yellow", "blue", "magenta", "cyan", "grey", "bright-red", "bright-green", "bright-yellow", "bright-blue", "bright-magenta", "bright-cyan", "black", "white"]
 const bgColors = ["red-bg", "green-bg", "yellow-bg", "blue-bg", "magenta-bg", "cyan-bg", "white-bg"]
 
 function ansiplace(str) {
@@ -42,6 +25,13 @@ function ansiplace(str) {
 		"{magenta-bg}": "\u001b[45m",
 		"{cyan-bg}": "\u001b[46m",
 		"{white-bg}": "\u001b[47m",
+		"{gray}|{grey}|{bright-black}": "\u001b[90m",
+		"{bright-red}": "\u001b[91m",
+		"{bright-green}": "\u001b[92m",
+		"{bright-yellow}": "\u001b[93m",
+		"{bright-blue}": "\u001b[94m",
+		"{bright-magenta}": "\u001b[95m",
+		"{bright-cyan}": "\u001b[96m",
 	}
 
 	for(let key in _colors) {
