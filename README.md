@@ -65,6 +65,14 @@ More will be coming soon.
 
 # Changelog
 
+# 1.1.2
+## Changed 
+- GPL-3.0 to MIT
+
+## 1.1.1
+## Added
+- `bright-*` colors
+
 ## 1.1.0  
 ## Added
 - This changelog
