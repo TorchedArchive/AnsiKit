@@ -1,14 +1,15 @@
 {
-  "name": "ansiplace",
-  "version": "1.1.2",
-  "description": "Replace tags in any string with ANSI color codes.",
-  "main": "index.js",
+  "name": "ansikit",
+  "version": "1.0.0",
+  "description": "🎨 The ultimate ANSI escape code kit.",
+  "main": "src/index.js",
+  "files": ["src/index.js"],
   "scripts": {
-    "test": "node test.js"
+    "test": "node example/showcase.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Terminalfreaks/ansiplace.git"
+    "url": "git+https://github.com/Luvella/AnsiKit.git"
   },
   "keywords": [
     "ansi",
@@ -18,11 +19,11 @@
     "terminal",
     "console"
   ],
-  "author": "Terminalfreaks",
+  "author": "Luvella",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Terminalfreaks/ansiplace/issues"
+    "url": "https://github.com/Luvella/AnsiKit/issues"
   },
-  "homepage": "https://github.com/Terminalfreaks/ansiplace#readme",
+  "homepage": "https://github.com/Luvella/AnsiKit#readme",
   "dependencies": {}
 }
