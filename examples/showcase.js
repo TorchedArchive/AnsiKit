@@ -1,6 +1,6 @@
-const ansiplace = require("../index")
+const ansikit = require("../")
 
-for (const key of ansiplace.extras.styles) {
+for (const key of ansikit.extras.styles) {
 	let name = key;
 
 	if (key === "reset") {
@@ -8,7 +8,7 @@ for (const key of ansiplace.extras.styles) {
 	}
 
 	if (/^[a-z]*-bg/.test(key)) {
-		name = ansiplace(`{black}${name}`);
+		name = ansikit.format(`{black}${name}`);
 	}
-	process.stdout.write(ansiplace(`   {${key}}${name}{reset}`));
+	process.stdout.write(ansikit.format(`   {${key}}${name}{reset}`));
 }

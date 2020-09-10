@@ -1,9 +1,9 @@
-const ansiplace = require("../index")
+const ansikit = require('../index')
 
-const text = "Hello rainbow world!".split("")
+const text = 'Hello rainbow world!'.split('')
 const rainbow = text.map((t, i) => {
-	const color = ansiplace.extras.colors[i % (ansiplace.extras.colors.length - 2)] // -2 removes black and white
+	const color = ansikit.extras.colors[i % 6] // The first 6 are the standard and visible colors (no bright-*, gray, black, white)
 	return `{${color}}${t}`
-}).join("")
+}).join('')
 
-console.log(ansiplace(rainbow))
+console.log(ansikit.format(rainbow))
