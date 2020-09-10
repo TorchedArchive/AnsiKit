@@ -1,27 +1,26 @@
-# ansiplace
-It's a very small and simple package that replaces tags (`{reset}`, `{blue}`) to ANSI color codes.  
-It doesn't check if the terminal supports color. You have to do that yourself.  
+# AnsiKit
+> 🎨 The ultimate ANSI escape code kit.
 
-# Installation
-`npm install ansiplace --save`
+AnsiKit assists you with using ANSI escape codes for things like colors, moving the cursor, changing the terminal window name and others.
+
+# Install
+`npm install ansikit`
  
-# Documentation
-## Example
+# Example
 ```js
-const ansiplace = require("ansiplace")
+const ansikit = require('ansikit');
 
-const text = ansiplace("{underline}Hello {red}world!")
-console.log(text)
-```  
-There is a rainbow example in [rainbow.js](https://github.com/Terminalfreaks/ansiplace/blob/master/examples/rainbow.js).
-  
-**`ansiplace(text)`**  
-The main and only function, which returns `text` with the color codes.  
+// The format function takes color tags and replaces it with color codes.
+const text = ansikit.format('{underline}Hello {red}world!');
+console.log(text);
+```
 
-**`ansiplace.extras`**  
-An `object` of extra things, like all colors and all styles.  
-- `ansiplace.extras.colors` - All colors (red, green, blue, etc.)
-- `ansiplace.extras.styles` - All styles (bold, underline, etc) and colors
+# Docs
+(`AnsiKit` in this instance would be whatever you defined the package as)
+
+## AnsiKit.format(text)
+Formats the `text`, replacing instances of `{tag}` (for example `{red}`) with the equivalent color code.  
+All available tags are listed at the [Styles](#styles)
 
 # Styles
 ### Modifiers
@@ -60,28 +59,3 @@ An `object` of extra things, like all colors and all styles.
 `bright-blue`  
 `bright-magenta`  
 `bright-cyan`  
-
-More will be coming soon.
-
-# Changelog
-
-# 1.1.2
-## Changed 
-- GPL-3.0 to MIT
-
-## 1.1.1
-## Added
-- `bright-*` colors
-
-## 1.1.0  
-## Added
-- This changelog
-- Showcase example
-- Background colors
-- `dim` and `invert` modifiers
-- Array of available styles (`ansiplace.extras.styles`)
-
-## Changed
-- Some newlines in README
-- `ansiplace.colors` => `ansiplace.extras.colors`
-- Include black and white in `ansiplace.extras.colors`
