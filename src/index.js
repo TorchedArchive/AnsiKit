@@ -2,49 +2,97 @@ const colors = ['red', 'green', 'yellow', 'blue', 'magenta', 'cyan', 'grey', 'br
 const bgColors = ['red-bg', 'green-bg', 'yellow-bg', 'blue-bg', 'magenta-bg', 'cyan-bg', 'white-bg']
 
 class AnsiKit {
+	/**
+	 * Triggers a full reset of the terminal to its original state (mostly).
+	 * This may include: reset colors, clear screen, reset to default font, and more.
+	 * @return {AnsiKit}
+	 */
+	static reset() {
+		process.stdout.write(AnsiKit._escape('c'));
+		return AnsiKit;
+	}
+
 	static get extras() {
 		return {
 			colors,
 			styles: ['reset', 'bold', 'dim', 'italic', 'underline', 'invert', 'strikethrough', ...colors, ...bgColors]
 		}
 	}
+
+	/**
+	 * Formats the text, replacing instances of '{tag}'' (for example '{red}') with the equivalent color code.
+	 * All available tags are listed at AnsiKit#extras
+	 * @param  {string} text The text to format.
+	 * @return {string}
+	 */
 	static format(text) {
 		const _colors = {
-			'{reset}': '\u001b[0m',
-			'{bold}': '\u001b[1m',
-			'{dim}|{faint}': '\u001b[2m',
-			'{italic}': '\u001b[3m',
-			'{underline}': '\u001b[4m',
-			'{invert}|{reverse}': '\u001b[7m',
-			'{strike}|{strikethrough}': '\u001b[9m',
-			'{black}': '\u001b[30m',
-			'{red}': '\u001b[31m',
-			'{green}': '\u001b[32m',
-			'{yellow}': '\u001b[33m',
-			'{blue}': '\u001b[34m',
-			'{magenta}': '\u001b[35m',
-			'{cyan}': '\u001b[36m',
-			'{white}': '\u001b[37m',
-			'{red-bg}': '\u001b[41m',
-			'{green-bg}': '\u001b[42m',
-			'{yellow-bg}': '\u001b[43m',
-			'{blue-bg}': '\u001b[44m',
-			'{magenta-bg}': '\u001b[45m',
-			'{cyan-bg}': '\u001b[46m',
-			'{white-bg}': '\u001b[47m',
-			'{gray}|{grey}|{bright-black}': '\u001b[90m',
-			'{bright-red}': '\u001b[91m',
-			'{bright-green}': '\u001b[92m',
-			'{bright-yellow}': '\u001b[93m',
-			'{bright-blue}': '\u001b[94m',
-			'{bright-magenta}': '\u001b[95m',
-			'{bright-cyan}': '\u001b[96m',
+			'{reset}': AnsiKit._escape('[0m'),
+			'{bold}': AnsiKit._escape('[1m'),
+			'{dim}|{faint}': AnsiKit._escape('[2m'),
+			'{italic}': AnsiKit._escape('[3m'),
+			'{underline}': AnsiKit._escape('[4m'),
+			'{invert}|{reverse}': AnsiKit._escape('[7m'),
+			'{strike}|{strikethrough}': AnsiKit._escape('[9m'),
+			'{black}': AnsiKit._escape('[30m'),
+			'{red}': AnsiKit._escape('[31m'),
+			'{green}': AnsiKit._escape('[32m'),
+			'{yellow}': AnsiKit._escape('[33m'),
+			'{blue}': AnsiKit._escape('[34m'),
+			'{magenta}': AnsiKit._escape('[35m'),
+			'{cyan}': AnsiKit._escape('[36m'),
+			'{white}': AnsiKit._escape('[37m'),
+			'{red-bg}': AnsiKit._escape('[41m'),
+			'{green-bg}': AnsiKit._escape('[42m'),
+			'{yellow-bg}': AnsiKit._escape('[43m'),
+			'{blue-bg}': AnsiKit._escape('[44m'),
+			'{magenta-bg}': AnsiKit._escape('[45m'),
+			'{cyan-bg}': AnsiKit._escape('[46m'),
+			'{white-bg}': AnsiKit._escape('[47m'),
+			'{gray}|{grey}|{bright-black}': AnsiKit._escape('[90m'),
+			'{bright-red}': AnsiKit._escape('[91m'),
+			'{bright-green}': AnsiKit._escape('[92m'),
+			'{bright-yellow}': AnsiKit._escape('[93m'),
+			'{bright-blue}': AnsiKit._escape('[94m'),
+			'{bright-magenta}': AnsiKit._escape('[95m'),
+			'{bright-cyan}': AnsiKit._escape('[96m'),
 		}
 
 		for(let key in _colors) {
 			text = text.replace(new RegExp(key, 'g'), _colors[key])
 		}
 	   	return `${text}${_colors['{reset}']}`
+	}
+
+	/**
+	 * Saves the current state of the terminal (cursor position, certain attributes, etc).
+	 * @return {AnsiKit}
+	 */
+	static saveState() {
+		process.stdout.write(AnsiKit._escape('7'));
+		return AnsiKit;
+	}
+
+	/**
+	 * Restores the most recently saved state.
+	 * @return {AnsiKit}
+	 */
+	static restoreState() {
+		process.stdout.write(AnsiKit._escape('8'));
+		return AnsiKit;
+	}
+
+	/**
+	 * Fills the screen with E's
+	 * @return {AnsiKit}
+	 */
+	static eScreen() {
+		process.stdout.write(AnsiKit._escape('#8'));
+		return AnsiKit;
+	}
+
+	static _escape(str) {
+		return `\u001b${str}`
 	}
 }
 

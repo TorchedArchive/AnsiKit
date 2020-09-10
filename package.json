@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "files": ["src/index.js"],
   "scripts": {
-    "test": "node example/showcase.js"
+    "test": "node examples/showcase.js"
   },
   "repository": {
     "type": "git",

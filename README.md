@@ -20,8 +20,22 @@ console.log(text);
 (`AnsiKit` in this instance would be whatever you defined the package as)
 
 ## AnsiKit.format(text)
+Default: `''`  
 Formats the `text`, replacing instances of `{tag}` (for example `{red}`) with the equivalent color code.  
-All available tags are listed at the [Styles](#styles)
+All available tags are listed at the [Styles.](#styles)
+
+## AnsiKit.reset()
+Triggers a full reset of the terminal to its original state (mostly).  
+This may include: reset colors, clear screen, reset to default font, and more.
+
+## AnsiKit.saveState()
+Saves the current state of the terminal (cursor position, certain attributes, etc).
+
+## AnsiKit.restoreState()
+Restores the most recently saved state.
+
+## AnsiKit.eScreen()
+Fills the screen with E's
 
 # Styles
 ### Modifiers
