@@ -134,7 +134,7 @@ class AnsiKit {
 	}
 
 	/**
-	 * Formats text, then prints it and goes down 1 line.
+	 * Formats text, then prints it and adds a newline.
 	 * @param  {[type]} str The text to format
 	 * @return {AnsiKit}
 	 */
