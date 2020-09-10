@@ -91,6 +91,58 @@ class AnsiKit {
 		return AnsiKit;
 	}
 
+	/**
+	 * Moves the cursor up 'x' amount of lines.
+	 * If x is -1, then it will move the cursor up the amount of lines in the terminal.
+	 * Default: 1
+	 * @param  {number} x How much lines to move up
+	 * @return {AnsiKit}
+	 */
+	static cursorUp(x) {
+		if (x === -1) x = process.stdout.rows;
+		if (!x) x = 1;
+		if (typeof x !== 'number') x = 0;
+
+		process.stdout.write(AnsiKit._escape(`[${x}A`));
+		return AnsiKit;
+	}
+
+	/**
+	 * Moves the cursor down 'x' amount of lines.
+	 * If x is -1, then it will move the cursor down the amount of lines in the terminal.
+	 * Default: 1
+	 * @param  {number} x How much lines to move down
+	 * @return {AnsiKit}
+	 */
+	static cursorDown(x) {
+		if (x === -1) x = process.stdout.rows;
+		if (!x) x = 1;
+		if (typeof x !== 'number') x = 0;
+
+		process.stdout.write(AnsiKit._escape(`[${x}B`))
+		return AnsiKit;
+	}
+
+	/**
+	 * Formats text, then prints it.
+	 * @param  {[type]} str The text to format
+	 * @return {AnsiKit}
+	 */
+	static print(text) {
+		process.stdout.write(AnsiKit.format(text));
+		return AnsiKit;
+	}
+
+	/**
+	 * Formats text, then prints it and goes down 1 line.
+	 * @param  {[type]} str The text to format
+	 * @return {AnsiKit}
+	 */
+	static println(str) {
+		process.stdout.write(`${AnsiKit.format(str)}\n`);
+		return AnsiKit;
+	}
+
 	static _escape(str) {
 		return `\u001b${str}`
 	}
