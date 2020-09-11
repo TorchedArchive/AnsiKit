@@ -1,6 +1,6 @@
 {
   "name": "ansikit",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "🎨 The ultimate ANSI escape code kit.",
   "main": "src/index.js",
   "files": ["src/index.js"],

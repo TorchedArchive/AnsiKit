@@ -20,7 +20,7 @@ class AnsiKit {
 	}
 
 	/**
-	 * Formats the text, replacing instances of '{tag}'' (for example '{red}') with the equivalent color code.
+	 * Formats the text, replacing instances of '{tag}' (for example '{red}') with the equivalent color code.
 	 * All available tags are listed at AnsiKit#extras
 	 * @param  {string} text The text to format.
 	 * @return {string}
@@ -125,7 +125,7 @@ class AnsiKit {
 
 	/**
 	 * Formats text, then prints it.
-	 * @param  {[type]} str The text to format
+	 * @param  {string} str The text to format
 	 * @return {AnsiKit}
 	 */
 	static print(text) {
@@ -135,11 +135,21 @@ class AnsiKit {
 
 	/**
 	 * Formats text, then prints it and adds a newline.
-	 * @param  {[type]} str The text to format
+	 * @param  {string} str The text to format
 	 * @return {AnsiKit}
 	 */
 	static println(str) {
 		process.stdout.write(`${AnsiKit.format(str)}\n`);
+		return AnsiKit;
+	}
+
+	/**
+	 * Sets the terminal window's title.
+	 * @param {string} text The text to use as the window title
+	 * @returns {AnsiKit}
+	 */
+	static setTitle(text) {
+		process.stdout.write(`${AnsiKit._escape(`]2;`)}${text}${AnsiKit._escape(`\\`)}`);
 		return AnsiKit;
 	}
 
