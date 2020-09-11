@@ -148,7 +148,7 @@ class AnsiKit {
 	 * @param {string} text The text to use as the window title
 	 * @returns {AnsiKit}
 	 */
-	static setTitle(text) {
+	static setTitle(text = ' ') {
 		process.stdout.write(`${AnsiKit._escape(`]2;`)}${text}${AnsiKit._escape(`\\`)}`);
 		return AnsiKit;
 	}
