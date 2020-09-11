@@ -55,6 +55,10 @@ Default: `''`
 Default: `'\n'`  
 [Formats](#ansikitformattext) text, then prints it and adds a newline.
 
+## AnsiKit.setTitle(text)
+Default: `' '`  
+Sets the terminal window's title.
+
 # Styles
 ### Modifiers
 `reset`  
