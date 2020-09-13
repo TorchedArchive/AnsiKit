@@ -1,17 +1,25 @@
 {
-    "plugins": [],
-    "recurseDepth": 10,
-    "source": {
-        "includePattern": ".+\\.js(doc|x)?$",
-        "excludePattern": "(^|\\/|\\\\)_"
-    },
-    "sourceType": "module",
-    "tags": {
-        "allowUnknownTags": true,
-        "dictionaries": ["jsdoc","closure"]
-    },
-    "templates": {
-        "cleverLinks": false,
-        "monospaceLinks": false
-    }
+	"tags": {
+		"allowUnknownTags": true,
+		"dictionaries": ["jsdoc"]
+	},
+	"source": {
+		"include": ["lib", "package.json", "README.md"],
+		"includePattern": ".js$",
+		"excludePattern": "(node_modules/|out)"
+	},
+	"plugins": [
+		"plugins/markdown"
+	],
+	"templates": {
+		"cleverLinks": false,
+		"monospaceLinks": true,
+		"useLongnameInNav": false,
+		"showInheritedInNav": true
+	},
+	"opts": {
+		"encoding": "utf8",
+		"private": true,
+		"recurse": true
+	}
 }
