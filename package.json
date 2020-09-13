@@ -13,11 +13,17 @@
   },
   "keywords": [
     "ansi",
+    "terminal",
     "color",
+    "colors",
+    "colour",
+    "console",
     "cli",
     "ansi-escape-codes",
-    "terminal",
-    "console"
+    "style",
+    "styles",
+    "formatting",
+    "tty"
   ],
   "author": "Luvella",
   "license": "MIT",
