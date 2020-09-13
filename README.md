@@ -1,5 +1,5 @@
 # AnsiKit
-> 🎨 The ultimate ANSI escape code kit.
+> 🎨 The ultimate terminal ANSI kit.
 
 AnsiKit assists you with using ANSI escape codes for things like colors, moving the cursor, changing the terminal window name and others.  
 This package under the hood just prints specific codes, but also makes life a bit easier.
