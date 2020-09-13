@@ -144,7 +144,7 @@ class AnsiKit {
 	}
 
 	/**
-	 * Sets the terminal window's title.
+	 * Sets the terminal window's title. 
 	 * @param {string} text The text to use as the window title
 	 * @returns {AnsiKit}
 	 */
