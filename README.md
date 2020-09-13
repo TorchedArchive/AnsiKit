@@ -17,47 +17,7 @@ console.log(text);
 ```
 
 # Docs
-(`AnsiKit` in this instance would be whatever you defined the package as)
-
-## AnsiKit.format(text)
-Default: `''`  
-Formats the `text`, replacing instances of `{tag}` (for example `{red}`) with the equivalent color code.  
-All available tags are listed at the [Styles.](#styles)
-
-## AnsiKit.reset()
-Triggers a full reset of the terminal to its original state (mostly).  
-This may include: reset colors, clear screen, reset to default font, and more.
-
-## AnsiKit.saveState()
-Saves the current state of the terminal (cursor position, certain attributes, etc).
-
-## AnsiKit.restoreState()
-Restores the most recently saved state.
-
-## AnsiKit.eScreen()
-Fills the screen with E's
-
-## AnsiKit.cursorUp(x)
-Default: `1`  
-Moves the cursor up `x` amount of lines.  
-If `x` is -1, then it will move the cursor up the amount of lines in the terminal.
-
-## AnsiKit.cursorDown(x)
-Default: `1`  
-Moves the cursor down `x` amount of lines.  
-If `x` is -1, then it will move the cursor down the amount of lines in the terminal.
-
-## AnsiKit.print(text)
-Default: `''`  
-[Formats](#ansikitformattext) text, then prints it.
-
-## AnsiKit.println(text)
-Default: `'\n'`  
-[Formats](#ansikitformattext) text, then prints it and adds a newline.
-
-## AnsiKit.setTitle(text)
-Default: `' '`  
-Sets the terminal window's title.
+The documentation for this library can be located [at this address.](https://luvella.github.io/AnsiKit)
 
 # Styles
 ### Modifiers
