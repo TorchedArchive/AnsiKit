@@ -2,7 +2,6 @@
 	"plugins": [],
 	"recurseDepth": 10,
 	"source": {
-		"include": ["lib", "package.json", "README.md"],
 		"includePattern": ".+\\.js(doc|x)?$",
 		"excludePattern": "(^|\\/|\\\\)_"
 	},
@@ -10,18 +9,11 @@
 	"tags": {
 		"allowUnknownTags": true,
 		"dictionaries": ["jsdoc","closure"],
-		"useLongnameInNav": false,
-		"showInheritedInNav": true
+        "useLongnameInNav": false,
+        "showInheritedInNav": true
 	},
 	"templates": {
 		"cleverLinks": false,
 		"monospaceLinks": false
-	},
-	"opts": {
-		"destination": "./out/",
-		"encoding": "utf8",
-		"private": true,
-		"recurse": true,
-		"template": "./minami"
 	}
 }
