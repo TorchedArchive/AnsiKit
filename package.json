@@ -1,9 +1,9 @@
 {
   "name": "ansikit",
-  "version": "1.0.2",
-  "description": "🎨 The ultimate ANSI escape code kit.",
-  "main": "src/index.js",
-  "files": ["src/index.js"],
+  "version": "1.0.3",
+  "description": "🎨 The ultimate terminal ANSI kit.",
+  "main": "lib/index.js",
+  "files": ["lib/index.js"],
   "scripts": {
     "test": "node examples/showcase.js"
   },

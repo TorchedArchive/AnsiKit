@@ -1,3 +1,3 @@
-const ansikit = require('./src/index');
+const ansikit = require('./lib/index');
 
 ansikit.reset().cursorDown(-1).print('{underline}Hello {red}world!').cursorUp(-1);
