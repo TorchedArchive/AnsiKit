@@ -1,8 +1,12 @@
 # AnsiKit
 > 🎨 The ultimate terminal ANSI kit.
 
-AnsiKit assists you with using ANSI escape codes for things like colors, moving the cursor, changing the terminal window name and others.  
-This package under the hood just prints specific codes, but also makes life a bit easier.
+AnsiKit is a small and simple library for setting attributes and reading information about a terminal.  
+It is very convenient due to having a consistent API and coverage for every sensible ANSI code.  
+
+AnsiKit simply prints escapes to the terminal for the user, but also results in cleaner looking code.  
+Note: If a terminal is not xterm-compatible some functions may not work as intended or just won't work at all.  
+(For example the standard Windows `cmd`, but [Windows Terminal](https://github.com/microsoft/terminal) should have better results.)
 
 # Install
 `npm install ansikit`
@@ -28,7 +32,6 @@ The documentation for this library can be located [at this address.](https://luv
 `underline`  
 `invert` or `reverse`  
 `strike` or `strikethrough`  
-
 
 ### Colors
 `black`  
