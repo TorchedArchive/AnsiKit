@@ -24,12 +24,15 @@ console.log(text);
 The documentation for this library can be located [at this address.](https://luvella.github.io/AnsiKit)
 
 # Styles
+A style can be used in a format function like: `{style}` for example `{bold}`.
 ### Modifiers
 `reset`  
 `bold`  
+`bold-off`  
 `dim` or `faint`  
 `italic`  
 `underline`  
+`underline-off`  
 `invert` or `reverse`  
 `strike` or `strikethrough`  
 
