@@ -1,7 +1,7 @@
 <h1 align="center">AnsiKit</h1>
 
 <blockquote align="center">🎨 The ultimate terminal ANSI kit.</blockquote>
-
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 <p align="center">AnsiKit is a small and simple library for setting attributes and reading information about a terminal.  
 It is very convenient due to having a consistent API and coverage for every sensible ANSI code.  
 
@@ -84,7 +84,7 @@ cd AnsiKit
 npm i
 npm i eslint -g # For linting (if you don't have it installed)
 # After making changes:
-eslint .
+eslint lib/
 ```
 
 If you aren't contributing code you can always open an issue.
