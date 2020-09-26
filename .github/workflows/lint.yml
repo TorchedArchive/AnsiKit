@@ -16,4 +16,5 @@ jobs:
         run: npm i
 
       - name: Run ESLint
-        run: eslint lib/
+        run: npm i eslint
+        run: node ./node_modules/eslint/bin/eslint.js lib/
