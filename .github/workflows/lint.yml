@@ -1,4 +1,4 @@
-name: GitHub pages
+name: ESLint
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  deploy:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
