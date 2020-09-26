@@ -74,7 +74,7 @@ A style can be used in a format function like: `{style}` for example `{bold}`.
 # Contributing
 If you would like to contribute, be sure to:
 - Lint with our ESLint config
-- Add JSDoc (if adding a new function)
+- Add JSDoc (if adding a new function)  
 And make a pull request!  
 
 ## Developing
