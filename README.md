@@ -1,8 +1,11 @@
 <h1 align="center">AnsiKit</h1>
 
 <blockquote align="center">🎨 The ultimate terminal ANSI kit.</blockquote>
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
-<p align="center">AnsiKit is a small and simple library for setting attributes and reading information about a terminal.  
+
+<p align="center">
+<img src="https://forthebadge.com/images/badges/built-with-love.svg">
+<br>
+AnsiKit is a small and simple library for setting attributes and reading information about a terminal.  
 It is very convenient due to having a consistent API and coverage for every sensible ANSI code.  
 
 AnsiKit simply prints escapes to the terminal for the user, but also results in cleaner looking code.  
