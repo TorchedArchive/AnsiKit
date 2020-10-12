@@ -3,8 +3,10 @@
   "version": "1.1.4",
   "description": "🎨 The ultimate terminal ANSI kit.",
   "main": "lib/index.js",
+  "types": "index.d.ts",
   "files": [
-    "lib/index.js"
+    "lib/index.js",
+    "index.d.ts"
   ],
   "scripts": {
     "test": "node examples/showcase.js"
