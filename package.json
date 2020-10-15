@@ -1,6 +1,6 @@
 {
   "name": "ansikit",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "🎨 The ultimate terminal ANSI kit.",
   "main": "lib/index.js",
   "types": "index.d.ts",
