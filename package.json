@@ -37,6 +37,6 @@
   "homepage": "https://github.com/Luvella/AnsiKit#readme",
   "dependencies": {},
   "devDependencies": {
-    "@luvella/eslint-config": "^1.0.2"
+    "@luvella/eslint-config": "^1.0.3"
   }
 }
