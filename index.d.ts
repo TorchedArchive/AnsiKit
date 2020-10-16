@@ -5,30 +5,38 @@ declare module "ansikit" {
 	}
 
 	class AnsiKit {
-		static get extras(): AnsiKitExtras;
-
+		static blockCursor: number;
+		static blockCursorSteady: number;
+		static underlineCursor: number;
+		static underlineCursorSteady: number;
+		static lineCursor: number;
+		static lineCursorSteady: number;
+		
 		static clear(scrollback?: boolean): typeof AnsiKit;
 		static clearFromPos(): typeof AnsiKit;
 		static clearLine(): typeof AnsiKit;
 		static clearToPos(): typeof AnsiKit;
 
-		static color256(num?: number): typeof AnsiKit;
+		static color256(color?: number): typeof AnsiKit;
 
 		static cursorDown(x?: number): typeof AnsiKit;
 		static cursorLeft(x?: number): typeof AnsiKit;
 		static cursorPos(): Promise<number[]>;
-		static cursorRight(x: number): typeof AnsiKit;
+		static cursorRight(x?: number): typeof AnsiKit;
+		static cursorStyle(style?: number): typeof AnsiKit;
 		static cursorTo(x?: number, y?: number): typeof AnsiKit;
 		static cursorUp(x?: number): typeof AnsiKit;
 
 		static eScreen(): typeof AnsiKit;
+
+		static get extras(): AnsiKitExtras;
 
 		static format(text: string): string;
 
 		static print(text: string): typeof AnsiKit;
 		static printCode(code: string | number, terminate?: boolean): typeof AnsiKit;
 		static printCSI(code?: string | number, end?: string): typeof AnsiKit;
-		static println(str: string): typeof AnsiKit;
+		static println(text?: string): typeof AnsiKit;
 
 		static reset(): typeof AnsiKit;
 
@@ -41,7 +49,7 @@ declare module "ansikit" {
 		static saveState(): typeof AnsiKit;
 
 		static setTitle(text?: string): typeof AnsiKit;
-		
+
 		static showCursor(): typeof AnsiKit;
 	}
 
