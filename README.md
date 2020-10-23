@@ -3,14 +3,17 @@
 <blockquote align="center">🎨 The ultimate terminal ANSI kit.</blockquote>
 
 <p align="center">
-<img src="https://forthebadge.com/images/badges/built-with-love.svg">
-<br>
-AnsiKit is a small and simple library for setting attributes and reading information about a terminal.  
-It is very convenient due to having a consistent API and coverage for every sensible ANSI code.  
-
-AnsiKit simply prints escapes to the terminal for the user, but also results in cleaner looking code.  
-Note: If a terminal is not xterm-compatible some functions may not work as intended or just won't work at all.  
-(For example the standard Windows `cmd`, but [Windows Terminal](https://github.com/microsoft/terminal) should have better results.)</p>
+	<img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2FLuvella%2FAnsiKit.svg?type=shield" href="https://app.fossa.com/projects/git%2Bgithub.com%2FLuvella%2FAnsiKit?ref=badge_shield" target="_blank">
+	<br>
+	<img src="https://forthebadge.com/images/badges/built-with-love.svg">
+	<br>
+	AnsiKit is a small and simple library for setting attributes and reading information about a terminal.  
+	It is very convenient due to having a consistent API and coverage for every sensible ANSI code.
+	<br><br>
+	AnsiKit simply prints escapes to the terminal for the user, but also results in cleaner looking code.<br>
+	Note: If a terminal is not xterm-compatible some functions may not work as intended or just won't work at all.<br>
+	(For example the standard Windows `cmd`, but <a href="https://github.com/microsoft/terminal">Windows Terminal</a> should have better results.)
+</p>
 
 # Table of Contents
 - [Install](#install)
@@ -95,3 +98,6 @@ If you aren't contributing code you can always open an issue.
 # License
 AnsiKit is licensed under the MIT license.  
 [Read here](LICENSE) for more info.
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FLuvella%2FAnsiKit.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FLuvella%2FAnsiKit?ref=badge_large)
