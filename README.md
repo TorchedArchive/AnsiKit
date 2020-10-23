@@ -13,6 +13,8 @@ Note: If a terminal is not xterm-compatible some functions may not work as inten
 (For example the standard Windows `cmd`, but [Windows Terminal](https://github.com/microsoft/terminal) should have better results.)</p>
 
 # Table of Contents
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FLuvella%2FAnsiKit.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FLuvella%2FAnsiKit?ref=badge_shield)
+
 - [Install](#install)
 - [Example](#example)
 - [Styles](#styles)
@@ -95,3 +97,6 @@ If you aren't contributing code you can always open an issue.
 # License
 AnsiKit is licensed under the MIT license.  
 [Read here](LICENSE) for more info.
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FLuvella%2FAnsiKit.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FLuvella%2FAnsiKit?ref=badge_large)
